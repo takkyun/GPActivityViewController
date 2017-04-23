@@ -22,6 +22,7 @@
 
 
 #import "GPSafariActivity.h"
+#import "UIImage+BundleImage.h"
 
 NSString *const kGPSafariActivity = @"GPSafariActivity";
 
@@ -32,7 +33,7 @@ NSString *const kGPSafariActivity = @"GPSafariActivity";
     if (self) {
         self.title = NSLocalizedStringInGPActivityViewController(@"ACTIVITY_SAFARI", @"GPActivityViewController", @"Open in Safari");
         NSString *imageName = @"GPActivityViewController.bundle/shareSafari";
-        self.image = [UIImage imageNamed:imageName];
+        self.image = [UIImage gpImageNamed:imageName];
     }
     
     return self;

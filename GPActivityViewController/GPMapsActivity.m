@@ -22,6 +22,7 @@
 
 
 #import "GPMapsActivity.h"
+#import "UIImage+BundleImage.h"
 
 NSString *const kGPActivityMaps = @"GPMapsActivity";
 
@@ -31,7 +32,7 @@ NSString *const kGPActivityMaps = @"GPMapsActivity";
     if (self) {
         self.title = NSLocalizedStringInGPActivityViewController(@"ACTIVITY_MAPS", @"GPActivityViewController", @"Open in Maps");
         NSString *imageName = @"GPActivityViewController.bundle/shareMaps";
-        self.image = [UIImage imageNamed:imageName];
+        self.image = [UIImage gpImageNamed:imageName];
     }
     
     return self;

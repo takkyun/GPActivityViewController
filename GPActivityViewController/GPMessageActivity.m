@@ -22,6 +22,7 @@
 
 #import "GPMessageActivity.h"
 #import <MessageUI/MessageUI.h>
+#import "UIImage+BundleImage.h"
 
 NSString *const GPActivityMessage = @"GPActivityMessage";
 
@@ -35,7 +36,7 @@ NSString *const GPActivityMessage = @"GPActivityMessage";
     if (self) {
         self.title = NSLocalizedStringInGPActivityViewController(@"ACTIVITY_MESSAGE", @"GPActivityViewController", @"Message");
         NSString *imageName = @"GPActivityViewController.bundle/shareMessage";
-        self.image = [UIImage imageNamed:imageName];
+        self.image = [UIImage gpImageNamed:imageName];
     }
 
     return self;

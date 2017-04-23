@@ -22,6 +22,7 @@
 
 #import "GPTwitterActivity.h"
 #import <Twitter/Twitter.h>
+#import "UIImage+BundleImage.h"
 
 NSString *const GPActivityTwitter = @"GPActivityTwitter";
 
@@ -32,7 +33,7 @@ NSString *const GPActivityTwitter = @"GPActivityTwitter";
     if (self) {
         self.title = NSLocalizedStringInGPActivityViewController(@"ACTIVITY_TWITTER", @"GPActivityViewController", @"Twitter");
         NSString *imageName = @"GPActivityViewController.bundle/shareTwitter";
-        self.image = [UIImage imageNamed:imageName];
+        self.image = [UIImage gpImageNamed:imageName];
     }
 
     return self;

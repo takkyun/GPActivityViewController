@@ -22,6 +22,7 @@
 
 #import "GPFacebookActivity.h"
 #import <Social/Social.h>
+#import "UIImage+BundleImage.h"
 
 NSString *const GPActivityFacebook = @"GPActivityFacebook";
 
@@ -32,7 +33,7 @@ NSString *const GPActivityFacebook = @"GPActivityFacebook";
     if (self) {
         self.title = NSLocalizedStringInGPActivityViewController(@"ACTIVITY_FACEBOOK", @"GPActivityViewController", @"Facebook");
         NSString *imageName = @"GPActivityViewController.bundle/shareFacebook";
-        self.image = [UIImage imageNamed:imageName];
+        self.image = [UIImage gpImageNamed:imageName];
     }
 
     return self;

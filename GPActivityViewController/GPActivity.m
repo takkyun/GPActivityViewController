@@ -21,6 +21,7 @@
 //
 
 #import "GPActivity.h"
+#import "UIImage+BundleImage.h"
 
 @interface GPActivity () {
     GPActivityActionHandler _actionHandler;
@@ -40,7 +41,7 @@
     activity.title = NSLocalizedStringInGPActivityViewController(@"ACTIVITY_CUSTOM", @"GPActivityViewController", @"Custom");
 
     NSString *imageName = @"GPActivityViewController.bundle/shareCustom";
-    activity->_image = [UIImage imageNamed:imageName];
+    activity->_image = [UIImage gpImageNamed:imageName];
 
     return activity;
 }

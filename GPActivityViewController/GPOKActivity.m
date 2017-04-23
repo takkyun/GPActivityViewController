@@ -23,6 +23,7 @@
 #import "GPOKActivity.h"
 #import "REComposeViewController.h"
 #import "OdnoklassnikiMgr.h"
+#import "UIImage+BundleImage.h"
 
 NSString *const GPActivityOdnoklassniki = @"GPActivityOdnoklassniki";
 
@@ -33,7 +34,7 @@ NSString *const GPActivityOdnoklassniki = @"GPActivityOdnoklassniki";
     if (self) {
         self.title = NSLocalizedStringInGPActivityViewController(@"ACTIVITY_ODNOKLASSNIKI", @"GPActivityViewController", @"Odnoklassniki");
         NSString *imageName = @"GPActivityViewController.bundle/shareOK";
-        self.image = [UIImage imageNamed:imageName];
+        self.image = [UIImage gpImageNamed:imageName];
     }
 
     return self;

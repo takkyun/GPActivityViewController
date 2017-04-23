@@ -22,6 +22,7 @@
 
 #import "GPMailActivity.h"
 #import <MessageUI/MessageUI.h>
+#import "UIImage+BundleImage.h"
 
 NSString *const GPActivityMail = @"GPActivityMail";
  
@@ -35,7 +36,7 @@ NSString *const GPActivityMail = @"GPActivityMail";
     if (self) {
         self.title = NSLocalizedStringInGPActivityViewController(@"ACTIVITY_MAIL", @"GPActivityViewController", @"Mail");
         NSString *imageName = @"GPActivityViewController.bundle/shareMail";
-        self.image = [UIImage imageNamed:imageName];
+        self.image = [UIImage gpImageNamed:imageName];
     }
 
     return self;

@@ -21,6 +21,7 @@
 //
 
 #import "GPCopyActivity.h"
+#import "UIImage+BundleImage.h"
 
 NSString *const GPActivityCopy = @"GPActivityCopy";
 
@@ -31,7 +32,7 @@ NSString *const GPActivityCopy = @"GPActivityCopy";
     if (self) {
         self.title = NSLocalizedStringInGPActivityViewController(@"ACTIVITY_COPY", @"GPActivityViewController", @"Copy");
         NSString *imageName = @"GPActivityViewController.bundle/shareCopy";
-        self.image = [UIImage imageNamed:imageName];
+        self.image = [UIImage gpImageNamed:imageName];
     }
     
     return self;

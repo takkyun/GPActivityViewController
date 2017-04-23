@@ -21,6 +21,7 @@
 //
 
 #import "GPPhotoActivity.h"
+#import "UIImage+BundleImage.h"
 
 NSString *const kGPActivityPhoto = @"GPPhotoActivity";
 
@@ -31,7 +32,7 @@ NSString *const kGPActivityPhoto = @"GPPhotoActivity";
     if (self) {
         self.title = NSLocalizedStringInGPActivityViewController(@"ACTIVITY_PHOTO", @"GPActivityViewController", @"Save to Camera Roll");
         NSString *imageName = @"GPActivityViewController.bundle/sharePhotos";
-        self.image = [UIImage imageNamed:imageName];
+        self.image = [UIImage gpImageNamed:imageName];
     }
     
     return self;

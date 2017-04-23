@@ -23,6 +23,7 @@
 #import "GPVKActivity.h"
 #import "VkontakteMgr.h"
 #import "REComposeViewController.h"
+#import "UIImage+BundleImage.h"
 
 NSString *const GPActivityVKontakte = @"GPActivityVKontakte";
 
@@ -33,7 +34,7 @@ NSString *const GPActivityVKontakte = @"GPActivityVKontakte";
     if (self) {
         self.title = NSLocalizedStringInGPActivityViewController(@"ACTIVITY_VKONTAKTE", @"GPActivityViewController", @"VKontakte");
         NSString *imageName = @"GPActivityViewController.bundle/shareVK";
-        self.image = [UIImage imageNamed:imageName];
+        self.image = [UIImage gpImageNamed:imageName];
     }
 
     return self;
