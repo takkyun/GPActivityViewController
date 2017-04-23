@@ -30,7 +30,7 @@ NSString *const GPActivityFacebook = @"GPActivityFacebook";
 - (id)init {
     self = [super init];
     if (self) {
-        self.title = NSLocalizedStringFromTable(@"ACTIVITY_FACEBOOK", @"GPActivityViewController", @"Facebook");
+        self.title = NSLocalizedStringInGPActivityViewController(@"ACTIVITY_FACEBOOK", @"GPActivityViewController", @"Facebook");
         NSString *imageName = @"GPActivityViewController.bundle/shareFacebook";
         self.image = [UIImage imageNamed:imageName];
     }

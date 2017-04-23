@@ -33,7 +33,7 @@ NSString *const GPActivityMail = @"GPActivityMail";
 - (id)init {
     self =  [super init];
     if (self) {
-        self.title = NSLocalizedStringFromTable(@"ACTIVITY_MAIL", @"GPActivityViewController", @"Mail");
+        self.title = NSLocalizedStringInGPActivityViewController(@"ACTIVITY_MAIL", @"GPActivityViewController", @"Mail");
         NSString *imageName = @"GPActivityViewController.bundle/shareMail";
         self.image = [UIImage imageNamed:imageName];
     }

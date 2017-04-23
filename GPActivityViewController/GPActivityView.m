@@ -44,7 +44,7 @@
 
             _cancelButton = [UIButton buttonWithType:UIButtonTypeCustom];
             _cancelButton.autoresizingMask = UIViewAutoresizingFlexibleTopMargin | UIViewAutoresizingFlexibleRightMargin | UIViewAutoresizingFlexibleLeftMargin;
-            [_cancelButton setTitle:NSLocalizedStringFromTable(@"BUTTON_CANCEL", @"GPActivityViewController", @"Cancel") forState:UIControlStateNormal];
+            [_cancelButton setTitle:NSLocalizedStringInGPActivityViewController(@"BUTTON_CANCEL", @"GPActivityViewController", @"Cancel") forState:UIControlStateNormal];
 
             UIColor *titleColor = [UIColor colorWithRed:22/255.f green:126/255.f
                                                    blue:251/255.f alpha:1.0f];

@@ -31,7 +31,7 @@ NSString *const GPActivityVKontakte = @"GPActivityVKontakte";
 - (id)init {
     self = [super init];
     if (self) {
-        self.title = NSLocalizedStringFromTable(@"ACTIVITY_VKONTAKTE", @"GPActivityViewController", @"VKontakte");
+        self.title = NSLocalizedStringInGPActivityViewController(@"ACTIVITY_VKONTAKTE", @"GPActivityViewController", @"VKontakte");
         NSString *imageName = @"GPActivityViewController.bundle/shareVK";
         self.image = [UIImage imageNamed:imageName];
     }
@@ -57,12 +57,12 @@ NSString *const GPActivityVKontakte = @"GPActivityVKontakte";
         textToShare = [NSString stringWithFormat:@"%@ %@", text, url.absoluteString];
     
     REComposeViewController *controller = [[REComposeViewController alloc] init];
-    controller.title = NSLocalizedStringFromTable(@"ACTIVITY_VKONTAKTE", @"GPActivityViewController", @"VKontakte");
+    controller.title = NSLocalizedStringInGPActivityViewController(@"ACTIVITY_VKONTAKTE", @"GPActivityViewController", @"VKontakte");
     controller.navigationBar.tintColor = [UIColor colorWithRed:56/255.0f green:99/255.0f blue:150/255.0f alpha:1.0];
 
     NSString *actionTitle = ([VkontakteMgr sharedInstance].accessToken == nil)? @"BUTTON_LOGIN": @"BUTTON_POST";
-    controller.navigationItem.rightBarButtonItem.title = NSLocalizedStringFromTable(actionTitle, @"GPActivityViewController", nil);
-    controller.navigationItem.leftBarButtonItem.title = NSLocalizedStringFromTable(@"BUTTON_CANCEL", @"GPActivityViewController", nil);
+    controller.navigationItem.rightBarButtonItem.title = NSLocalizedStringInGPActivityViewController(actionTitle, @"GPActivityViewController", nil);
+    controller.navigationItem.leftBarButtonItem.title = NSLocalizedStringInGPActivityViewController(@"BUTTON_CANCEL", @"GPActivityViewController", nil);
 
     if (textToShare) {
         controller.text = textToShare;
@@ -90,7 +90,7 @@ NSString *const GPActivityVKontakte = @"GPActivityVKontakte";
             } else {
                 [[VkontakteMgr sharedInstance] retrieveAccessToken:@[@"wall,photos"] completion:^(BOOL completed) {
                     if (completed) {
-                        NSString *title = NSLocalizedStringFromTable(@"BUTTON_POST", @"GPActivityViewController", @"Post");
+                        NSString *title = NSLocalizedStringInGPActivityViewController(@"BUTTON_POST", @"GPActivityViewController", @"Post");
                         composeViewController.navigationItem.rightBarButtonItem.title = title;
                     }
                 }];

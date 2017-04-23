@@ -42,3 +42,6 @@ typedef void (^ActivityViewCompletionHandler)(NSString *activityType, BOOL compl
 - (void)presentModalViewControllerAnimated:(UIViewController *)controller;
 
 @end
+
+#define NSLocalizedStringInGPActivityViewController(key, tbl, comment) \
+[[NSBundle bundleForClass:[GPActivityViewController class]] ? : [NSBundle mainBundle] localizedStringForKey:(key) value:@"" table:(tbl)]

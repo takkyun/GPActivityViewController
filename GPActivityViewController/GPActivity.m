@@ -37,7 +37,7 @@
     
     activity->_actionHandler = [block copy];
     activity->_activityType = activityType;
-    activity.title = NSLocalizedStringFromTable(@"ACTIVITY_CUSTOM", @"GPActivityViewController", @"Custom");
+    activity.title = NSLocalizedStringInGPActivityViewController(@"ACTIVITY_CUSTOM", @"GPActivityViewController", @"Custom");
 
     NSString *imageName = @"GPActivityViewController.bundle/shareCustom";
     activity->_image = [UIImage imageNamed:imageName];

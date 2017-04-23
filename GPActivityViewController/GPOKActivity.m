@@ -31,7 +31,7 @@ NSString *const GPActivityOdnoklassniki = @"GPActivityOdnoklassniki";
 - (id)init {
     self = [super init];
     if (self) {
-        self.title = NSLocalizedStringFromTable(@"ACTIVITY_ODNOKLASSNIKI", @"GPActivityViewController", @"Odnoklassniki");
+        self.title = NSLocalizedStringInGPActivityViewController(@"ACTIVITY_ODNOKLASSNIKI", @"GPActivityViewController", @"Odnoklassniki");
         NSString *imageName = @"GPActivityViewController.bundle/shareOK";
         self.image = [UIImage imageNamed:imageName];
     }
@@ -56,12 +56,12 @@ NSString *const GPActivityOdnoklassniki = @"GPActivityOdnoklassniki";
     }
     
     REComposeViewController *controller = [[REComposeViewController alloc] init];
-    controller.title = NSLocalizedStringFromTable(@"ACTIVITY_ODNOKLASSNIKI", @"GPActivityViewController", @"Odnoklassniki");
+    controller.title = NSLocalizedStringInGPActivityViewController(@"ACTIVITY_ODNOKLASSNIKI", @"GPActivityViewController", @"Odnoklassniki");
     controller.navigationBar.tintColor = [UIColor colorWithRed:245/255.0f green:130/255.0f blue:35/255.0f alpha:1.0];
     
     NSString *actionTitle = ([OdnoklassnikiMgr sharedInstance].accessToken == nil)? @"BUTTON_LOGIN": @"BUTTON_POST";
-    controller.navigationItem.rightBarButtonItem.title = NSLocalizedStringFromTable(actionTitle, @"GPActivityViewController", nil);
-    controller.navigationItem.leftBarButtonItem.title = NSLocalizedStringFromTable(@"BUTTON_CANCEL", @"GPActivityViewController", nil);
+    controller.navigationItem.rightBarButtonItem.title = NSLocalizedStringInGPActivityViewController(actionTitle, @"GPActivityViewController", nil);
+    controller.navigationItem.leftBarButtonItem.title = NSLocalizedStringInGPActivityViewController(@"BUTTON_CANCEL", @"GPActivityViewController", nil);
 
     if (textToShare)
         controller.text = textToShare;
@@ -79,7 +79,7 @@ NSString *const GPActivityOdnoklassniki = @"GPActivityOdnoklassniki";
                 [weakSelf activityDidFinish:YES];
             } else {
                 [[OdnoklassnikiMgr sharedInstance] retrieveAccessToken:@[@"VALUABLE ACCESS"] completion:^() {
-                    NSString *title = NSLocalizedStringFromTable(@"BUTTON_POST", @"GPActivityViewController", @"Post");
+                    NSString *title = NSLocalizedStringInGPActivityViewController(@"BUTTON_POST", @"GPActivityViewController", @"Post");
                     composeViewController.navigationItem.rightBarButtonItem.title = title;
                 }];
             }
